@@ -23,7 +23,7 @@ const Page = db.define('page', {
     status: {
         type: Sequelize.ENUM('open', 'closed')
       }
-})
+});
 
 Page.beforeValidate((page) => {
     let title = page.title;
@@ -40,11 +40,9 @@ const User = db.define('user', {
     },
     email: {
       type: Sequelize.STRING,
-      validate: {
-          isEmail: true,
-          allowNull: false
+        isEmail: true,
+        allowNull: false
       }
-    }
   });
 
 Page.belongsTo(User, {as: 'author'});

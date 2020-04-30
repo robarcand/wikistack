@@ -7,34 +7,45 @@ module.exports = () => layout(html`
   <form action="/wiki/" method="POST">
     
     <div class="form-group">
-    <label for="name" class="col-sm-2 control-label">Author's Name</label>
-      <div class="col-sm-10">
-        <input action="/wiki/" type="text" method="POST" class="form-control"/>
+      <label for="name" class="col-sm-2 control-label">Author Name</label>
+        <div class="col-sm-10">
+          <input name="name" type="text" class="form-control"/>
+        </div>
+      
+      
+        <label for="email" class="col-sm-2 control-label">Author's Email</label>
+          <div class="col-sm-10">
+            <input name="email" type="text" class="form-control"/></div>
+          </div>
+      
+
+    
+        <label for="title" class="col-sm-2 control-label">Page Title</label>
+          <div class="col-sm-10">
+            <input name="title" type="text" class="form-control"/>
+          </div>
+    
+
+      
+        <label for="content" class="col-sm-2 control-label">Content</label>
+          <div class="col-sm-10">
+            <textarea name="content"></textarea>
+          </div>
+    
+
+      
+        <label for="status" class="col-sm-2 control-label">Status</label>
+          <div class="col-sm-10">
+            <select name="status">
+            <option>open</option>
+            <option>closed</option>
+            </select>
+          </div>
+      
+      
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">submit</button>
       </div>
-    
-      <label for="email" class="col-sm-2 control-label">Author's Email</label>
-        <div class="col-sm-10">
-          <input action="/wiki/" type="text" method="POST" class="form-control"/></div>
-        </div>
-
-      <label for="title" class="col-sm-2 control-label">Page Title</label>
-        <div class="col-sm-10">
-          <input id="title" name="title" type="text" class="form-control"/>
-        </div>
-
-      <label for="content" class="col-sm-2 control-label">Page Content Text Area</label>
-        <div class="col-sm-10">
-          <input action="/wiki/" type="text" method="POST" class="form-control"/>
-        </div>
-
-      <label for="status" class="col-sm-2 control-label">Page Status</label>
-        <div class="col-sm-10">
-          <input action="/wiki/" type="text" method="POST" class="form-control"/>
-        </div>
-    
-    <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-primary">submit</button>
     </div>
-  
   </form>
 `);
